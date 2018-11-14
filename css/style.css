@@ -1,0 +1,505 @@
+
+/** MAIN PAGE **/
+.main-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.bottomwelcome_content{bottom: 10px;height: auto;margin: auto;padding: 10px;background: transparent !important;border:none !important;}
+.svsef_icon_main{margin: 30% auto 0 auto;height: 60px;}
+
+/** LOGIN PAGE **/
+.login-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+.login-page-container *{color: #fff;}
+.login-page-container .heading_page{margin: 0% 0 0 0 !important;font-size: 24px;}
+.bg_img{background-image: url('../img/login_bg.jpg');background-repeat:  no-repeat;background-size: cover;}
+
+.login-page-container input[type='text'],.login-page-container input[type='password'],.login-page-container input[type='number']{
+    margin: 20px auto 0 auto;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+}
+/*.login-page-container input[type='text']:focus,.login-page-container input[type='password']:focus{
+    color: #5f7283;
+}*/
+
+.login-page-container input::placeholder{color: #fff;opacity: 1;}
+.login-page-container input:focus::placeholder{color: #5f7283;opacity: 1;}
+
+.login-page-container input::-webkit-input-placeholder { color:#fff;opacity: 1; }
+.login-page-container input:focus::-webkit-input-placeholder { color:#5f7283;opacity: 1; }
+
+.login-page-container input::-moz-placeholder { color:#fff;opacity: 1; } /* firefox 19+ */
+.login-page-container input:focus::-moz-placeholder { color:#5f7283;opacity: 1; } /* firefox 19+ */
+
+.login-page-container input:-ms-input-placeholder { color:#fff;opacity: 1; } /* ie */
+.login-page-container input:focus:-ms-input-placeholder { color:#5f7283;opacity: 1; } /* ie */
+
+.login-page-container input:-moz-placeholder { color:#fff;opacity: 1; }
+.login-page-container input:focus:-moz-placeholder { color:#5f7283;opacity: 1; }
+
+/** REGISTRATION PAGE **/
+
+input.txtbox_center{width: 60% !important; margin: auto 0 auto 30% !important;}
+.name_reg{
+    color: #d5e0ea;
+    font-size: 30px;
+    margin: 13% 0 0 0;
+    text-transform: capitalize;
+}
+.subname_reg{
+    color: #d5e0ea;
+    font-size: 24px;
+    margin: 15% 0 0 0;
+}
+.user_type_button{
+    background: transparent;
+    border: 3px solid #d5e0ea;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 8px 10px !important;
+    display: block;
+    margin: 10px auto 20px auto;
+    min-width: 180px;
+}
+.user_type_button:hover,.user_type_button:active,.user_type_button:focus,.user_type_button.active{
+    background: #fac04b;
+    color: #fff !important;
+}
+.bottomfixed_content{bottom: 10px;height: auto;margin: auto;padding: 10px;background: transparent !important;border:none !important;}
+/*.bottomfixed_content .app_grey_button{line-height: 42px !important;}*/
+
+/** Profile Setup **/
+.single_program{
+    width: 50%;
+    display: inline-block;
+}
+.program_full_bg{
+    position: relative;
+    cursor: pointer;
+}
+.program_yellow_bg{
+    background: #fac04b;
+    height: 75px;
+    border-radius: 50%;
+    width: 75px;
+    margin: 0 auto;
+}
+.program_img{
+    /*position: absolute;
+    top: 0;
+    left: 24%;*/
+    margin: 0 auto;    
+    background-size: contain;
+    background-position: center center;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+}
+.program_name{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+
+/** TEAM SELECTION PAGE **/
+.team_select_area {
+    display: inline-block;
+    font-size: 25px;
+    width: 13%;
+    vertical-align: middle;
+    color: #fac04b;    
+}
+.team_select_area .checktick{
+    background-image: url("../img/arrow_circle.png");
+    width: 35px;
+    height: 35px;
+    background-size: contain;background-repeat: no-repeat;background-position: 0 0;
+}
+.team_select_area .checktick.active{
+    background-image: url("../img/arrow_circle_overlay.png");
+    width: 35px;
+    height: 35px;
+    background-size: contain;background-repeat: no-repeat;background-position: 0 0;
+}
+.team_name {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    width: 85%;
+    padding-left: 10px;
+}
+.team_full_div {
+    margin: 0 0 15px 0;
+}
+#add_teams_height{
+    height: 83vh !important;
+    overflow: hidden !important;
+}
+
+/** MY TEAM PAGE **/
+.myteam-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.myteam_select_area {
+    display: inline-block;
+    font-size: 25px;
+    width: 13%;
+    vertical-align: middle;
+    color: #fac04b;    
+}
+.myteam_name {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+    width: 85%;
+    padding-left: 10px;
+}
+.my_single_team {
+    padding: 15px 0 15px 15px;
+    border-top: 2px solid #fff;
+}
+.my_single_team:last-child {
+    border-bottom: 2px solid #fff;
+}
+.myteam_select_area{
+    cursor: pointer;
+}
+
+/** CONTACTS PAGE **/
+.contact_program_name{
+    color: #fac04b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.single_contact {
+    font-size: 14px;
+    margin: 0 0 20px 20px;
+}
+.circle_contact {
+    background: #8697a5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 15px 0 0 0;
+    color: #fff;
+}
+.yellow_circle_contact{
+    background: #fac04b;
+    color: #8697a5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 15px 0 0 0;
+}
+.yellow_circle_contact i{
+    font-size: 26px;
+    color: #8697a5;
+}
+.left_email_icon {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px 0 0;
+}
+.left_email_icon i{
+    min-width: 70px;
+}
+.right_email_cnt {
+    display: table-cell;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/** MY ACCOUNT PAGE **/
+.myaccount-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.myaccount_select_area {
+    display: inline-block;
+    font-size: 16px;
+    width: 13%;
+    vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.myaccount_full_div a{
+    color: #fff;
+}
+.myaccount_name {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+    width: 85%;
+    padding-left: 10px;
+}
+.my_single_account {
+    padding: 15px 0 15px 15px;
+    border-top: 2px solid #fff;
+}
+.my_single_account:last-child {
+    border-bottom: 2px solid #fff;
+}
+
+/** MY PROFILE PAGE **/
+.myprofile-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.myprofile_select_area {
+    display: inline-block;
+    font-size: 16px;
+    width: 68%;
+    vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+.myprofile_full_div a{
+    color: #fff;
+}
+.myprofile_name {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    width: 30%;
+    padding-left: 10px;
+    color: #fac04b;
+}
+.my_single_profile {
+    padding: 15px 0 15px 15px;
+    border-top: 2px solid #fff;
+}
+.my_single_profile:last-child {
+    border-bottom: 2px solid #fff;
+}
+.account_password_input{
+    background: transparent !important;
+    border: none !important;
+    color: #fac04b !important;
+}
+.account_password_input::placeholder{color: #fac04b;opacity: 1;}
+.account_password_input:focus::placeholder{color: #fac04b;opacity: 1;}
+
+.account_password_input::-webkit-input-placeholder { color:#fac04b;opacity: 1; }
+.account_password_input:focus::-webkit-input-placeholder { color:#fac04b;opacity: 1; }
+
+.account_password_input::-moz-placeholder { color:#fac04b;opacity: 1; } /* firefox 19+ */
+.account_password_input:focus::-moz-placeholder { color:#fac04b;opacity: 1; } /* firefox 19+ */
+
+.account_password_input:-ms-input-placeholder { color:#fac04b;opacity: 1; } /* ie */
+.account_password_input:focus:-ms-input-placeholder { color:#fac04b;opacity: 1; } /* ie */
+
+.account_password_input:-moz-placeholder { color:#fac04b;opacity: 1; }
+.account_password_input:focus:-moz-placeholder { color:#fac04b;opacity: 1; }
+
+.my_single_profile_pass {
+    padding: 10px 0 10px 15px;
+    border-top: 2px solid #fff;
+}
+.my_single_profile_pass:last-child {
+    border-bottom: 2px solid #fff;
+}
+
+/** NOTIFICATION PAGE **/
+.notification-page-container{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.notification-page-container *{color: #fff;}
+.notification-page-container .heading_page{margin: 7% 0 0 0 !important;font-size: 18px;}
+.notification-page-container .list li
+{
+    background-color: transparent !important;
+    border:none !important;
+    color:#fff !important;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.notification-page-container .toggle .handle{
+    background-color: transparent !important;
+    border: 3px solid #fff !important;
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    top: 5px;
+}
+.notification-page-container .toggle .track{
+    background-color: transparent !important;
+    border: 3px solid #fff !important;
+    width: 46px;
+    height: 26px;
+}
+.notification-page-container .toggle.toggle-assertive input:checked + .track{border-color: #fff !important}
+.notification-page-container .toggle input:checked + .track .handle{background-color: #fac04b !important;border: 4px solid #fff;}
+
+/** ATTENDANCE PAGE **/
+.col-40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    font-size: 20px;
+}
+span.attendance_date {
+    color: #fac04b;
+    font-size: 2em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #d5e0ea;
+}
+/*.moment-picker-input{
+    color: #fac04b !important;
+    font-size: 22px !important;
+    background: transparent !important;
+    padding-bottom: 6px !important;
+    border-bottom: 2px solid #d5e0ea !important;
+    margin: 0 auto;
+    display: inline !important;
+    height: auto !important;
+    width: 100px;
+    text-align: center;
+    cursor: pointer !important;
+}*/
+.date_txt{
+    color: #fac04b;
+    text-transform: uppercase;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+}
+
+/* Create a custom checkbox */
+.radiocontainer {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.radiocontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid #fac04b;
+}
+/* On mouse-over, add a grey background color */
+/*.radiocontainer:hover input ~ .checkmark {
+    background-color: #fac04b;
+}*/
+
+/* When the checkbox is checked, add a blue background */
+.radiocontainer input:checked ~ .checkmark {
+    background-color: #fac04b;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.radiocontainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.radiocontainer .checkmark:after {
+    left: 7px;
+    top: 1px;
+    width: 10px;
+    height: 17px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.attendance_notes{
+    color: #8697a5;
+    font-size: 42px;
+    margin-top: -7px;
+    display: inline-block;
+}
+
+/** Coach UPDATE PAGE **/
+.styled_inputbox{
+    margin: 20px auto 0 auto;
+    width: 100%;
+    background: transparent;
+    color: #fff !important;
+    font-size: 20px !important;
+    text-align: left;
+}
+.styled_inputbox::placeholder{color: #fff;opacity: 1;}
+.styled_inputbox:focus::placeholder{color: #5f7283;opacity: 1;}
+
+.styled_inputbox::-webkit-input-placeholder { color:#fff;opacity: 1; }
+.styled_inputbox:focus::-webkit-input-placeholder { color:#5f7283;opacity: 1; }
+
+.styled_inputbox::-moz-placeholder { color:#fff;opacity: 1; } /* firefox 19+ */
+.styled_inputbox:focus::-moz-placeholder { color:#5f7283;opacity: 1; } /* firefox 19+ */
+
+.styled_inputbox:-ms-input-placeholder { color:#fff;opacity: 1; } /* ie */
+.styled_inputbox:focus:-ms-input-placeholder { color:#5f7283;opacity: 1; } /* ie */
+
+.styled_inputbox:-moz-placeholder { color:#fff;opacity: 1; }
+.styled_inputbox:focus:-moz-placeholder { color:#5f7283;opacity: 1; }
+
+.update_coach_name{color: #8697a5;font-size: 12px;text-align: right;display: block;}
+.update_coach_message{background: #8697a5;padding: 10px;text-align: left;border-radius: 10px;}
+.update_usr_icon{background: #8697a5;border-radius: 50%;margin: 20px 0 0 0;width: 30px;height: 30px;line-height: 30px;}
+
+.coach_update_send_button{vertical-align: middle;color: #fff !important;font-size: 22px;}
+@media (min-width:320px) and (max-width:370px) {
+    .coach_update_send_button{font-size: 14px !important;}
+    .coach_update_msg_box{margin-left: 0px !important;}
+}

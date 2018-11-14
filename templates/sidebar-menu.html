@@ -1,0 +1,55 @@
+<ion-side-menus enable-menu-with-back-views="true" ng-controller="NewsCtrl">
+    <!-- Center content -->
+    <ion-nav-bar class="bar-site" align-title="center">
+        <ion-header-bar class="bar-light color_whiteimp">
+            <ion-nav-buttons side="left">
+                <a ng-click="backButton()" ng-show="back_button_show == 1" style="font-size: 35px; color: rgb(255, 255, 255); display: block; margin: 45% 0 0 30%;text-align: left;"><i class="ion-arrow-left-c color_whiteimp"></i></a>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon ion-navicon icon_menuclick icon_menuclick_top" drawer-toggle animate="true"></button>
+            </ion-nav-buttons>
+        </ion-header-bar>
+    </ion-nav-bar>
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-view name="menuWorPress"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <drawer side="left" id="side_drawer">
+        <ion-view title="Cool" class="side_menu">
+            <ion-content style="height: 90vh;top:0px;">
+                <div class="sidemenu_top">
+                    <span class="menu_close" ng-click="menuClose()"><i class="ion-arrow-right-c"></i></span>
+                    <div class="menu_logo"><img src="img/logo_white.png"/></div>
+                </div>
+                <ion-list class="side_menu_lst">
+                    <ion-item menu-close-keep-history href="#/news/calendar" ng-show="red_notify.calendar_count == 0" class="item-icon-left side_menu_itm">Calendar</ion-item>
+                    <ion-item menu-close-keep-history href="#/news/calendar_updates" ng-show="red_notify.calendar_count > 0" class="item-icon-left side_menu_itm">Calendar <span class="red_circle">{{red_notify.calendar_count}}</span></ion-item>
+                    
+                    <ion-item menu-close-keep-history href="#/news/attendance" ng-show="user.user_type == 'coach'" class="item-icon-left side_menu_itm">Attendance</ion-item>
+                    <ion-item menu-close-keep-history href="#/news/coach_updates" class="item-icon-left side_menu_itm">Coach Updates <span class="red_circle" ng-show="red_notify.coach_count > 0">{{red_notify.coach_count}}</span></ion-item>
+                    <ion-item menu-close-keep-history href="#/news/contacts" class="item-icon-left side_menu_itm">Contacts</ion-item>
+                    <ion-item menu-close-keep-history href="#/news/notify_settings" class="item-icon-left side_menu_itm">Notification Settings</ion-item>
+                    <ion-item menu-close-keep-history href="#/news/my_account" class="item-icon-left side_menu_itm">Account</ion-item>
+                </ion-list>
+                
+                <ion-list class="custom_menu" ng-show="groups.length > 0" style="margin: 0 0 30px 0;">
+                    <div ng-repeat="group in groups">
+                        <ion-item class="item-stable item-icon-left side_menu_itm parent_menu_grp" ng-class="{active: isGroupShown(group)}">
+                            <div class="parent_menu"><a href="{{group.url}}">{{group.name}}</a></div>
+                            <div class="parent_icon icon_menuclick" ng-show="group.submenu == 1" ng-click="toggleGroup(group)">
+                                <i class="icon icon_menuclick" ng-class="isGroupShown(group) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                            </div>
+                        </ion-item>
+                        <ion-item class="item-accordion child_menu" ng-repeat="item in group.items" ng-show="isGroupShown(group)" href="{{item.url}}">{{item.name}}</ion-item>
+                    </div>
+                </ion-list>
+                
+            </ion-content>
+            <div class="bar bar-subfooter bottomfixed_content" style="margin: 0 0 0 17%;">
+                <a href="{{fb_url}}"><span class="menu_social_icons ion-social-facebook"></span></a>
+                <a href="{{insta_url}}"><span class="menu_social_icons ion-social-instagram"></span></a>
+                <a href="{{site_url}}"><span class="menu_social_icons ion-earth" style="font-size: 1.8em;"></span></a>
+            </div>
+        </ion-view>
+    </drawer>
+</ion-side-menus>

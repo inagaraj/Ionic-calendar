@@ -1,0 +1,69 @@
+<ion-view view-title="{{Calendar}}">
+    <ion-content  class="bg_clr calendar-page-container">
+        <div  class="">
+            <div role="main" class="ui-content">
+                <div class="clear"></div>
+                <div class="height100per">
+                    <div class="row mar0 pad10 disflex">
+                        <div class="col col-33 pad0"> 
+                            <div class="item bg_trans"> 
+                                <div class="pad0 txtcap" ng-click="displayMenus()"> 
+                                    <div class="pad5 col-xs-12"> 
+                                        <div class="col-xs-11 fleft pad0 txtleft">{{calendar.mode}}</div>
+                                        <div class="col-xs-1 fright pad0"><i class="ion-android-arrow-dropdown"></i></div> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                            <div class="item bg_trans col col-33" id="menu_data" style="display: none;"> 
+                                <div class="pad0"> 
+                                    <div class="col" ng-click="changeMode('month')">Month</div> 
+                                    <div class="col" ng-click="changeMode('week')">Week</div> 
+                                    <div class="col" ng-click="changeMode('day')">Day</div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="col col-33 txtcenter title fsize16">
+                            <div>
+                                <span class="{{calendar.mode}}_title">{{viewTitle}}</span><br>
+                                <span class="fsize16">{{subTitle}}</span>
+                            </div>
+                        </div>
+                        <div class="col col-33"></div>
+                    </div>
+                    
+
+                    </div>
+                    <div class="clear"></div>
+                    <div class="height100per">
+                        <ion-spinner ng-show="loading"></ion-spinner>
+                        <div ng-show="!loading" ng-if="calendar.mode=='week'"> 
+                            <div ng-show="calendar.eventSource == null"> 
+                                <div class="col pad0">
+                                    <div class="txtcenter pad10 padright7 item-text-wrap border_none">
+                                        <div class="item bg_day_trans color_fff border0 pad5imp lineheight25">
+                                            <div class="pad0">
+                                                <div class="col col-55 pad5 events_details">
+                                                    <div class="event_title fsize20">No Sessions Found...!</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                             
+                        <calendar  ng-model="calendar.currentDate" calendar-mode="calendar.mode" event-source="calendar.eventSource"
+                            range-changed="reloadSource(startTime, endTime,Current_date)"
+                            event-selected="onEventSelected(event)" title-changed="onViewTitleChanged(title,subtitle)"
+                            time-selected="onTimeSelected(selectedTime, events, disabled)" step="30">
+                        </calendar>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </ion-content>
+    
+</ion-view>

@@ -1,0 +1,1096 @@
+.nav-left 
+{
+    text-align: left;
+}
+.nav-right 
+{
+    text-align: right;
+}
+.scrollable 
+{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.calendar-container 
+{
+    height: 100%;
+}
+.text-muted 
+{
+    color: #999;
+}
+.table-fixed 
+{
+    table-layout: fixed;
+}
+.table 
+{
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+.table > thead > tr > th 
+{
+    vertical-align: bottom;
+    /*bottom: 2px solid #ddd;*/
+}
+.table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td 
+{
+    border-top: 0
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 2px;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th 
+{
+    background-color: #f9f9f9
+}
+.no-event-label 
+{
+    font-weight: bold;
+    color: darkgrey;
+    text-align: center;
+}
+.event-detail-container {
+  /*  border-top: 2px darkgrey solid;*/
+    margin-top: 440px;
+}
+.event-detail 
+{
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.calendar-header 
+{
+    text-align: center;
+    padding-top: 5px;
+}
+.calendar-hour-column 
+{
+    width: 50px;
+    white-space: nowrap;
+}
+.calendar-event-wrap 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.calendar-event 
+{
+    position: absolute;
+    padding: 2px;
+    cursor: pointer;
+    z-index: 10000;
+}
+.calendar-event-inner 
+{
+    overflow: hidden;
+    background-color: #3a87ad;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    line-height: 15px;
+}
+.calendar-cell 
+{
+    padding: 0 !important;
+    height: 37px;
+}
+.monthview-primary-with-event 
+{
+    background-color: #fac04b;
+    color: white;
+    border-radius: 50%;
+}
+.monthview-current 
+{
+    border-radius: 50%;
+}
+.monthview-selected 
+{
+    background-color: #fac04b;
+    color: white;
+    border-radius: 50%;
+}
+.monthview-datetable td.monthview-disabled 
+{
+    color: lightgrey;
+    cursor: default;
+}
+.monthview-datetable th 
+{
+    text-align: center;
+}
+.monthview-datetable td 
+{
+    cursor: pointer;
+    text-align: center;
+}
+.monthview-secondary-with-event 
+{
+    background-color: #d9edf7;
+}
+.weekview-allday-label, .dayview-allday-label 
+{
+    float: left;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+.weekview-allday-content-table, .dayview-allday-content-table 
+{
+    min-height: 50px;
+}
+.monthview-slide 
+{
+    height: 320px;
+    background: #131e3e;
+}
+.weekview-slide, .weekview, .dayview-slide, .dayview 
+{
+    height: 100%;
+}
+.weekview-header th 
+{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.weekview-allday-table, .dayview-allday-table 
+{
+    height: 50px;
+    position: relative;
+   /* border-bottom: 1px solid #ddd;*/
+}
+.weekview-normal-event-container 
+{
+    margin-top: 87px;
+    overflow: hidden;
+}
+.dayview-normal-event-container 
+{
+    margin-top: 47px;
+    overflow: hidden;
+}
+@media (max-width: 750px) 
+{
+    .weekview-allday-label, .dayview-allday-label, .calendar-hour-column {
+        width: 31px;
+        font-size: 12px;
+    }
+
+    .weekview-allday-label, .dayview-allday-label {
+        padding-top: 4px;
+    }
+
+    .weekview-normal-event-container {
+        margin-top: 83px;
+    }
+
+    .table > tbody > tr > td.calendar-hour-column {
+        padding-left: 0;
+        padding-right: 0;
+        vertical-align: middle;
+        line-height: 12px;
+    }
+
+    .table > thead > tr > th.weekview-header {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    .weekview-allday-label, .dayview-allday-label {
+        line-height: inherit;
+    }
+
+    .weekview-allday-content-wrapper, .dayview-allday-content-wrapper {
+        margin-left: 31px;
+    }
+
+    .calendar-event-inner {
+        font-size: 12px;
+    }
+}
+.jsCalendar * {
+    margin: 0;
+    padding: 0;
+}
+.jsCalendar .cal_table,
+.jsCalendar .cal_table th,
+.jsCalendar .cal_table td {
+    border: 0;
+}
+/* Blue default */
+.jsCalendar .cal_table {
+    background-color: #131E3E;
+    border-collapse: collapse;
+    color: #fff;
+    margin: 0 auto;
+
+}
+.jsCalendar thead .jsCalendar-title {
+    height: 40px;
+    line-height: 40px;
+}
+.jsCalendar thead .jsCalendar-title-left {
+    float: left;
+}
+.jsCalendar thead .jsCalendar-title-right {
+    float: right;
+}
+.jsCalendar thead .jsCalendar-nav-left,
+.jsCalendar thead .jsCalendar-nav-right {
+    border-radius: 10px;
+    color: #999999;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    margin: 10px 8px;
+    text-align: center;
+    transition: color 0.2s, background-color 0.2s;
+    width: 20px;
+}
+.jsCalendar thead .jsCalendar-nav-left:hover,
+.jsCalendar thead .jsCalendar-nav-right:hover {
+    background-color: #E2E2E2;
+    color: #000000;
+}
+.jsCalendar thead .jsCalendar-nav-left {
+    float: left;
+}
+.jsCalendar thead .jsCalendar-nav-right {
+    float: right;
+}
+.jsCalendar thead .jsCalendar-title-name {
+    cursor: default;
+    float: left;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 0 20px;
+}
+
+.jsCalendar thead .jsCalendar-week-days th {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color:#fac04b;
+}
+.jsCalendar .cal_table thead .jsCalendar-week-days th,
+.jsCalendar .cal_table tbody td {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px;
+    line-height: 35px;
+    margin: 4px;
+    text-align: center;
+    transition: color 0.1s, background-color 0.2s;
+    width: 35px;
+}
+.jsCalendar .cal_table tbody td.jsCalendar-selected {
+    background-color: #FFFFFF;
+    border: 2px solid #E6E6E6;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+}
+.jsCalendar .cal_table tbody td.jsCalendar-current {
+    background-color: #52C9FF;
+    border-radius: 18px;
+    color: #FFFFFF;
+}
+.jsCalendar .cal_table thead {
+    display: block;
+    margin: 4px 0px 0 0px
+}
+.jsCalendar .cal_table tbody {
+    display: block;
+    margin: 4px 0px 0 0px
+}
+.jsCalendar ::-moz-selection {
+    background: #83D8FF;
+}
+.jsCalendar ::selection {
+    background: #83D8FF;
+}
+
+.table-fixed {
+    table-layout: fixed;
+}
+
+.no-event-label {
+    font-weight: bold;
+    color: darkgrey;
+    text-align: center;
+}
+.event-detail {
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+}
+
+.calendar-header {
+    text-align: center;
+    padding-top: 5px;
+    font-weight: bold;
+    color:#fff;
+    display: inline-flex;
+    align-items:center;
+}
+.fsize30
+{
+    font-size: 30px;
+}
+.icon_color
+{
+    color:#5f7283;
+    cursor: pointer;
+}
+.icon_color:hover
+{
+    color: #ddd;
+}
+.mtop30{
+    margin-top: 30px;
+}
+.disflex
+{
+    display: inline-flex;
+    align-items:center;
+}
+.calendar-hour-column, .calendar-week-column {
+    width: 50px;
+}
+.calendar-navbar {
+    margin-bottom: 5px;
+}
+
+.calendar-event-wrap {
+    position: relative;
+    height: 100%;
+}
+
+.calendar-event {
+    position: absolute;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.calendar-event-inner {
+    overflow: hidden;
+    background-color: #3a87ad;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    line-height: 15px;
+}
+
+.calendar-cell {
+    padding: 0 !important;
+    height: 37px;
+}
+
+.monthview-primary-with-event {
+   border: 1px solid #fac04b !important;
+background-color: #fac04b;
+color: #131e3e;
+}
+
+.monthview-selected {
+    border: 1px solid #0390f0 !important;
+    background-color: #131e3e !important;
+    color: #fff !important;
+}
+
+.monthview-current1 {
+    background-color: #d2d1d1;
+    color:#0d2d48;
+}
+
+.monthview-eventdetail-timecolumn {
+    width: 110px;
+    overflow: hidden;
+    padding: 2px;
+    /*padding-left: 20px;*/
+}
+
+.monthview-dateCell {
+    cursor: pointer;
+}
+
+.monthview-secondary-with-event {
+    background-color: #d9edf7;
+}
+
+.weekview-allday-label, .dayview-allday-label {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    border: 1px solid #ddd;
+    border-right-width: 0;
+}
+
+.weekview-allday-content-wrapper{
+    margin-left: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+.dayview-allday-content-wrapper {
+    margin-left: 0px;
+    height: 100%;
+}
+
+.weekview-header, .monthview-datetable {
+    margin-bottom: 0;
+}
+
+.weekview-header th {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.weekview-allday-table, .dayview-allday-table {
+    height: 500px;
+}
+
+.weekview-allday-content-table, .dayview-allday-content-table {
+    min-height: 100%;
+    margin-bottom: 0;
+}
+
+.gutter-column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.pad0
+{
+    padding: 0;
+}
+.site_bk
+{
+    background: #131e3e;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.bg_trans 
+{
+    padding: 6px;
+    background: #131e3e;
+    color: #fac04b;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+    border: 1px solid #fff;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    width: 85px;
+}
+.padleft0
+{
+    padding-left: 0;
+}
+.padright5
+{
+    padding-right: 5px;
+}
+.padleft10
+{
+    padding-left: 10px;
+}
+.padright0
+{
+    padding-right: 0;
+}
+.txtcap
+{
+    text-transform: capitalize;
+}
+#menu_data  
+{
+    color:#8697a5;
+    font-size: 16px;
+    position: absolute;
+    background: #131e3e;
+    padding: 6px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-weight: lighter;
+    z-index: 1000;
+    margin-top: 0;
+    border-top:0;
+    width: 85px;
+    text-align: left;
+}
+.drop_icon
+{
+    vertical-align: middle;
+    font-size: 20px;
+    float: right;
+}
+#team_data
+{
+    color:#8697a5;
+    font-size: 14px;
+    position: absolute;
+    background: #131e3e;
+    padding: 6px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-weight: lighter;
+    margin-top: 0;
+    border-top:0;
+    width: 200px;
+    z-index: 100;
+    max-height: 200px;
+    overflow: hidden auto;
+}
+.padright20
+{
+    padding-right: 20px;
+}
+.curpoint 
+{
+    cursor: pointer;
+}
+.back_none 
+{
+    background: none;
+}
+.border_none 
+{
+    border: none;
+}
+.color_fff 
+{
+    color: #fff !important;
+}
+.txtcenter 
+{
+    text-align: center;
+}
+.pad10 
+{
+    padding: 10px;
+}
+.bg_day_trans 
+{
+    padding: 15px;
+    border-radius: 10px;
+    background: #253d58;
+    border: navajowhite;
+}
+.lineheight25 
+{
+    line-height: 25px;
+}
+.pad5imp 
+{
+    padding: 5px !important;
+}
+.pad5 
+{
+    padding: 5px;
+}
+.event_title
+{
+    color: #18d3bd;
+}
+.sub_text
+{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.link_text
+{
+    text-decoration: underline;
+    color: #fff;
+}
+.mtop10
+{
+    margin-top: 10px;
+}
+.fweight
+{
+    font-weight: bold;
+}
+.notdisply
+{
+    display: none;
+}
+.wk_event 
+{
+    width: 10px;
+    height: 10px;
+}
+.disp_inlineblock 
+{
+    display: inline-block;
+}
+.week_table
+{
+    width:100%;
+    color:#fff;
+}
+.week_title_td
+{
+    padding: 5px;
+    width:20%;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color:#fff;
+    border-top:none ! important;
+}
+.week_event_details_td
+{
+    padding: 5px;
+    width: 80%;
+    border-top: 2px solid #bce0fd! important;
+    background: #253d58;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color:#fff;
+}
+.txt_cap
+{
+    text-transform: uppercase;
+}
+.clear
+{
+    clear: both;
+    height:20px;
+}
+.notdisply
+{
+    display: none;
+}
+.txtright
+{
+    text-align: right;
+}
+.txtcenter
+{
+    text-align: center;
+}
+.blue_evnt
+{
+    background: #18d3bd;
+}
+.orange_event
+{
+    background: #d34a18
+}
+@media (min-width:320px) and (max-width:370px) {
+    .week_event_details_td
+    {
+        font-size: 12px;
+    }
+    .week_title_td
+    {
+        font-size: 12px;
+    }
+}
+@media (min-width:380px) 
+{
+    #menu_data,.bg_trans
+    {
+        font-size: 16px;
+    }
+    .jsCalendar .cal_table thead .jsCalendar-week-days th,
+    .jsCalendar .cal_table tbody td 
+    {
+        margin: 8px;
+    }
+    .event-detail-container 
+    {
+        margin-top: 510px;
+    }
+}
+@media (min-width:371px) and (max-width:430px) 
+{
+    .week_event_details_td
+    {
+        font-size: 14px;
+    }
+    .week_title_td
+    {
+        font-size: 14px;
+    }
+}
+@media (min-width:330px) 
+{
+    .site_bk {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.evt_title_td
+{
+    vertical-align: middle ! important;
+}
+.mon_event_detail
+{
+    border: none;
+    color:#fff;
+    width: 350px;
+    margin: 0 auto;
+}
+.mon_event_detail td
+{
+    border: none ! important; 
+}
+.event_detail_title
+{
+    font-size: 18px;
+    color:#fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    padding-left: 0;
+}
+.fsize20
+{
+    font-size:20px;
+}
+.bor_btm_clr
+{
+    border-bottom-color: #131e3e;
+}
+.fright
+{
+    float:right;
+}
+.mbottom20
+{
+    margin-bottom: 20px;
+}
+.mtop10
+{
+    margin-top: 10px;
+}
+/* The check_container */
+.check_container 
+{
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    color:#fff;
+}
+.team_drop
+{
+    font-size:18px;
+    color: #fab042;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.drop_div
+{
+    width:200px;
+    margin: 0 auto;
+}
+.month_drop
+{
+    width: 200px;
+}
+.week_day_view
+{
+    width:202px ! important;
+}
+.month_th
+{
+    font-weight: 600 ! important;
+}
+.fsize16{
+    font-size:16px;
+}
+.txt_nowrap
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+.fnormal
+{
+    font-weight: normal;
+}
+.txtleft
+{
+    text-align: left;
+}
+.sidebtn
+{
+    width: 150px;   
+    margin: 0 auto;
+}
+.text-muted {
+    color: #8697a5;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: none;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: none;
+    outline: 0;
+}
+.multiselect-container > li {
+    padding-top: 5px ! important;
+    padding-bottom: 5px ! important;
+
+}
+.dropdown-menu {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: auto;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #131e3e;
+    border: 1px solid #ccc;
+    border: 1px solid #fff;
+
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    background-clip: padding-box;
+    border-top: 0;
+    border-radius: 0;
+    margin-top: -1px;
+    
+
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+
+    color: #262626;
+    text-decoration: none;
+    background-color: #131e3e;
+
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+
+    color: #fff;
+    text-decoration: none;
+    background-color: #131e3e;
+    outline: 0;
+
+}
+.padtop0{
+    padding-top: 0;
+}
+.padbottom0
+{
+    padding-bottom: 0;
+}
+.bg_clr
+{
+    background: #131e3e;
+}
+.title
+{
+    color:#fff;
+}
+/* Hide the browser's default checkbox */
+.check_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkboxmark {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    height: 20px;
+    width: 20px;
+    background-color: #131e3e;
+
+border: 1px solid #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.check_container:hover input ~ .checkboxmark {
+   background-color: #131e3e;
+
+border: 1px solid #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check_container input:checked ~ .checkboxmark {
+   background-color: #131E3E;
+
+border: 1px solid #fff;
+}
+
+/* Create the checkboxmark/indicator (hidden when not checked) */
+.checkboxmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkboxmark when checked */
+.check_container input:checked ~ .checkboxmark:after {
+    display: block;
+}
+
+/* Style the checkboxmark/indicator */
+.check_container .checkboxmark:after {
+    left: 7px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid #fac04b;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.mtop20
+{
+    margin-top: 20px;
+}
+mar0
+{
+    margin: 0;
+}
+.month_title
+{
+    font-size: 22px;
+}
+.week_title
+{
+    font-size: 18px;
+}
+.day_title
+{
+    font-size: 16px;
+}
+.txtupp
+{
+    text-transform: uppercase;
+}
+.header-item
+{
+    cursor: pointer;
+}
+.add_cal_div {
+    margin: 0 0 15px 0;
+}
+.cal_add_area {
+    display: inline-block;
+    font-size: 20px;
+    width: 13%;
+    vertical-align: middle;
+    color: #fff;
+    padding-right: 10px;
+}
+
+.cal_add_area .checktick {
+    background-image: url("../img/arrow_circle_white.png");
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.colrfff
+{
+    color:#fff;
+}
+.padright7
+{
+    padding-right: 7px;
+}
+@media (min-width:320px) and (max-width:350px) 
+{
+    .day_title
+    {
+        font-size:14px;
+    }
+}
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
